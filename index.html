@@ -3,57 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayed Amjad Fawad - Resume</title>
+    <title>Sayed Amjad Fawad - Professional Resume</title>
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f5f7fa; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; display: flex; justify-content: center; padding: 40px 20px; }
-        .resume { background: white; width: 1000px; display: grid; grid-template-columns: 300px 1fr; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        
-        /* Left Column */
-        .sidebar { background: var(--primary); color: white; padding: 40px 30px; text-align: center; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; margin-bottom: 20px; }
-        .sidebar h2 { margin: 10px 0; font-size: 1.5em; }
-        .contact-info { text-align: left; margin-top: 30px; font-size: 0.9em; }
-        
-        /* Right Column */
-        .main-content { padding: 40px 50px; color: #444; }
-        h3 { color: var(--accent); border-bottom: 2px solid #eee; padding-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .section { margin-bottom: 30px; }
-        .skill-tag { display: inline-block; background: #ebf5fb; color: var(--accent); padding: 5px 12px; border-radius: 20px; margin: 4px; font-weight: bold; font-size: 0.85em; }
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-main: #333;
+            --bg-light: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 10px;
+        }
+        .resume-wrapper {
+            background: white;
+            width: 900px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .sidebar h1 { font-size: 1.4em; margin-bottom: 5px; }
+        .sidebar p { font-size: 0.9em; opacity: 0.8; margin-top: 0; }
+        .contact-details { text-align: left; margin-top: 30px; font-size: 0.85em; }
+        .contact-details p { margin: 10px 0; opacity: 1; }
+
+        /* Main Content Styling */
+        .content { padding: 40px; color: var(--text-main); }
+        h2 { color: var(--accent-color); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px; }
+        .section-item { margin-bottom: 20px; }
+        .skill-badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #01579b;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
-    <div class="resume">
+    <div class="resume-wrapper">
         <aside class="sidebar">
-            <img src="profile.jpg" alt="Sayed Amjad Fawad" class="profile-img">
-            <h2>Sayed Amjad Fawad</h2>
+            <img src="profile.jpg" alt="Sayed Amjad Fawad" class="profile-pic">
+            <h1>Sayed Amjad Fawad</h1>
             <p>Computer Engineering Student</p>
-            <div class="contact-info">
-                <p>📍 Safranbolu, Karabük</p>
-                <p>📧 amjad.fawad@example.com</p>
-                <p>🆔 ID: 2410213509</p>
+            
+            <div class="contact-details">
+                <p><strong>ID:</strong> 2410213509</p>
+                <p><strong>Location:</strong> Karabük, Turkey</p>
+                <p><strong>Email:</strong> amjad.fawad@example.com</p>
             </div>
         </aside>
 
-        <main class="main-content">
-            <section class="section">
-                <h3>Education</h3>
-                <p><strong>Karabük University</strong><br>B.S. in Computer Engineering | 2nd Year</p>
+        <main class="content">
+            <section class="section-item">
+                <h2>Summary</h2>
+                <p>Second-year Computer Engineering student at Karabük University with experience in web development and logic circuit design.</p>
+            </section>
+
+            <section class="section-item">
+                <h2>Education</h2>
+                <p><strong>Karabük University</strong><br>B.S. in Computer Engineering</p>
                 <p><strong>University of the People</strong><br>B.S. in Computer Science</p>
             </section>
 
-            <section class="section">
-                <h3>Core Technical Skills</h3>
-                <div class="skill-tag">Java</div> <div class="skill-tag">C</div>
-                <div class="skill-tag">PHP</div> <div class="skill-tag">SQL</div>
-                <div class="skill-tag">HTML/CSS</div> <div class="skill-tag">Logic Gates</div>
-                <div class="skill-tag">Data Structures</div>
+            <section class="section-item">
+                <h2>Technical Proficiencies</h2>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">C</span>
+                <span class="skill-badge">PHP</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">HTML5/CSS3</span>
+                <span class="skill-badge">Data Structures</span>
+                <span class="skill-badge">Logic Gates</span>
             </section>
 
-            <section class="section">
-                <h3>Projects & Leadership</h3>
-                <p><strong>Secure Authentication Portal</strong><br>Implemented SHA256 password hashing for university Lab 4.</p>
-                <p><strong>Youth Leadership</strong><br>Fellow and Ambassador for Learning Planet Institute.</p>
+            <section class="section-item">
+                <h2>Notable Projects</h2>
+                <p><strong>Secure Authentication System:</strong> Developed a PHP-based portal utilizing SHA256 cryptographic hashing for secure user access.</p>
             </section>
         </main>
     </div>
