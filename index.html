@@ -2,45 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resume - Sayed Amjad Fawad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayed Amjad Fawad - Resume</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; padding: 40px; color: #333; }
-        .resume-container { background: white; max-width: 800px; margin: auto; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #0056b3; }
-        header { text-align: center; margin-bottom: 30px; }
-        h1 { margin: 0; color: #0056b3; font-size: 2.5em; }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #0056b3; margin-top: 30px; }
-        .info { color: #666; font-size: 1.1em; }
-        ul { line-height: 1.8; }
+        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f5f7fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; display: flex; justify-content: center; padding: 40px 20px; }
+        .resume { background: white; width: 1000px; display: grid; grid-template-columns: 300px 1fr; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        /* Left Column */
+        .sidebar { background: var(--primary); color: white; padding: 40px 30px; text-align: center; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; margin-bottom: 20px; }
+        .sidebar h2 { margin: 10px 0; font-size: 1.5em; }
+        .contact-info { text-align: left; margin-top: 30px; font-size: 0.9em; }
+        
+        /* Right Column */
+        .main-content { padding: 40px 50px; color: #444; }
+        h3 { color: var(--accent); border-bottom: 2px solid #eee; padding-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .section { margin-bottom: 30px; }
+        .skill-tag { display: inline-block; background: #ebf5fb; color: var(--accent); padding: 5px 12px; border-radius: 20px; margin: 4px; font-weight: bold; font-size: 0.85em; }
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <header>
-            <h1>Sayed Amjad Fawad</h1>
-            <p class="info">Computer Engineering Student | Student ID: 2410213509</p>
-            <p class="info">Karabük University | University of the People</p>
-        </header>
+    <div class="resume">
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Sayed Amjad Fawad" class="profile-img">
+            <h2>Sayed Amjad Fawad</h2>
+            <p>Computer Engineering Student</p>
+            <div class="contact-info">
+                <p>📍 Safranbolu, Karabük</p>
+                <p>📧 amjad.fawad@example.com</p>
+                <p>🆔 ID: 2410213509</p>
+            </div>
+        </aside>
 
-        <section>
-            <h2>Education</h2>
-            <p><strong>Karabük University</strong> - B.S. in Computer Engineering (2nd Year)</p>
-            <p><strong>University of the People</strong> - B.S. in Computer Science</p>
-        </section>
+        <main class="main-content">
+            <section class="section">
+                <h3>Education</h3>
+                <p><strong>Karabük University</strong><br>B.S. in Computer Engineering | 2nd Year</p>
+                <p><strong>University of the People</strong><br>B.S. in Computer Science</p>
+            </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming:</strong> Java, C, PHP, SQL, HTML, CSS</li>
-                <li><strong>Software:</strong> Eclipse, XAMPP, phpMyAdmin, Canva</li>
-                <li><strong>Concepts:</strong> Data Structures, Logic Circuits, OOP</li>
-            </ul>
-        </section>
+            <section class="section">
+                <h3>Core Technical Skills</h3>
+                <div class="skill-tag">Java</div> <div class="skill-tag">C</div>
+                <div class="skill-tag">PHP</div> <div class="skill-tag">SQL</div>
+                <div class="skill-tag">HTML/CSS</div> <div class="skill-tag">Logic Gates</div>
+                <div class="skill-tag">Data Structures</div>
+            </section>
 
-        <section>
-            <h2>Certifications & Experience</h2>
-            <p>Youth Fellow & Communications Ambassador - Learning Planet Institute (2024-2025)</p>
-            <p>CS50 Introduction to Computer Science - edX Enrollment</p>
-        </section>
+            <section class="section">
+                <h3>Projects & Leadership</h3>
+                <p><strong>Secure Authentication Portal</strong><br>Implemented SHA256 password hashing for university Lab 4.</p>
+                <p><strong>Youth Leadership</strong><br>Fellow and Ambassador for Learning Planet Institute.</p>
+            </section>
+        </main>
     </div>
 </body>
 </html>
